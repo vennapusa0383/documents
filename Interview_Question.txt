@@ -1,0 +1,1012 @@
+Coding questions :
+Integer Array sorting
+Check each character in a string is unique or not ?
+Having an arrary list of employees, increase the salary of employees by 10000
+Having an array list of employees, filter the employee based on the given input
+Write a function interface to add the sum of two numbers
+write a programm to merge 2 integers arrays and sort them
+write a programm to sum all the elements in the integer array using streams
+write a programme to find employees from a list with specific salary
+What is FlatMap ?
+HashMap internals ?
+Difference between HashMap & HashSet ?
+Internals of HashSet; how does it work internally
+intern() method in String class ?
+How to access static inner class methods from outer class ?
+String Immutable examples
+Serial stream and parallel stream
+Livelocks on thread
+how many types of syncronization
+when to consider arraylist and linkedlist
+->ArrayList provides constant time for search operation,use ArrayList if searching is more frequent operation, than add and remove operation.
+  The LinkedList provides constant time for add and remove operations.- manipulation.
+ 
+What are the changes in Java 8 on HashMap
+Added the a new feature oflinked list to  binary tree after no. of elements reached certain threshold in the buckets.
+
+what id ConcurrentHashMap ?
+
+what is trywith resource
+what type of class under list?
+-> ArrayList, vector, linkedlist.
+
+what is the super class for STACK
+->Vector
+what is Treeset and its super class
+-> AbstractSet and Set Interface.
+
+Fail safe(concurrentHashMap,CopyOn writingArraylist) and Fail Fast(HashMap ArrayList Vectoy, HashSet)
+custom collection and custom linked list
+Disadvantage in Parallel streaming
+PriorityQueue vs LinkedListQueue
+
+What are the types Isolation levels
+-> Read commit,Read Uncommited, repeatable read and serilizable
+
+what is the contract between equals() and hashcode()
+->if two objects are equal to each other based on equals() method, then the hash code must be the same, but if the hash code is the same, then equals() can return false.
+
+internal working of HashMap, HashSet and Hashtable ?
+
+if hashcode of 2 objects is same then is that means objects are equals or not?
+-> No,
+
+MultiValuedMap
+Interface A and B having a same abstract method then if a implementation class is implementing both the interfaces then error will come or not
+Interface A and B having a same default method then if a implementation class is implementing both the interfaces then error will come or not
+Write a program to implement :
+MusicalNotesSeq notesC = new MusicalNotesSeq("C","CDEFGABC"); //1st param is scale and another is notes
+MusicalNotesSeq notesAm = new MusicalNotesSeq("Am","ABCDEFG");
+O/p -> notesC.equals(notesAm) should return True
+(2) Merge 2 sorted lists :
+1 3 5 7
+2 10 11 17
+(3) What are streams ? Using streams, convert a HashMap to ArrayList, if it is possible.
+PriorityQueue vs LinkedListQueue
+Can have 2 main method in Spring application
+what are the transaction isolation and propogation levels
+write sql query to join 3 tables emp, address and dept
+what is an sql injection
+if you want to do database side performance tuning what are the steps you need to take
+in loops which one you will choose string or stringbuilder?
+difference between stringbuffer and stringbuilder class
+difference between abstract and interface ? in which scenerio you will use ?
+Difference between ArrayList and LinkedList?
+what is concurrentModificationException?
+Difference between HashMap and ConcurrentHashMap?
+Internal working of HashSet?
+what is TreeSet?
+what is the difference between voltaile & transient keywords ?
+what are the ways of implementing threads in java? which one is recommended  and why ?
+ what is synchronization ?
+ what is the difference between class level lock and object level lock ?
+ Difference between runnabble and callable interfaces ?
+ what is future object ?
+
+what are predefined functional interfaces
+I want to group by employee object based on department id like dept_id - and belonging employees using java streams api
+how to find max and min elements from an array
+harsha is a java developer -> character count
+do you have experience on gradle tool and diff b/w maven and gradle
+implements vs extends examples in real time
+marker interface , cloneable(cloning process)- what if not implements clone() method when deep cloning
+auto closeable (try with resource)-any restrict or condition to have in try block for classes
+reflections variables and usage and variables will be accessed
+override default methods
+what is swagger
+Internal Explaination of ConcurrentHashMap
+Is it mandatory to override a method present in an interface
+What is static and default method in interface
+What is singleton and how you can break it
+Why do we use Postman? How we can authenticate or authorize from Postman
+How your app authenticate and authorize [REST api]
+What is difference between Soap and Rest
+When to use SOAP
+How to improve the fetch from database in database side
+
+What is difference between spy and mock
+-> fully mock or dummy objects and partail dummy object used for large testing suits.
+
+How can we get a temporary table in db
+->, instead of using the CREATE TABLE statement, you use the CREATE TEMPORARY TABLE statement
+
+Few questions where on Stored Procedure
+What is JQuery
+What all you have done in UI and Java
+ What is Serialization Interface And Externalizble Interface?
+What is Functional Interface and Lamdba Expression?
+ How to make Singleton is threadsafe?
+Swap 2 variables without using 3rd variable
+    A=7, B=9
+Return 0 or 1
+()[]{} returns 0
+([{}]) returns 0
+({[}]) returns 1
+
+What is closure-  
+   Swap the value of var a=3 & var b=5.  
+    Question on reversing a string –
+    Question on caching in JavaScript -
+ What is the output and why; execute the same in console
+    function sayHi() { console.log(name); console.log(age); var name = "Lydia", let age = 21}
+    sayHi()
+    for(var i=0;i<3;i++) setTimeOut(() => console,log(i), 1);
+
+    for(let i=0;i<3;i++) setTimeOut(() => console,log(i), 1);
+//Pair of three numbers
+
+function find(num,sum){
+    num.sort((a,b)=> a-b)
+  const tmp = []
+    for(let i =0;i<num.length;i++){
+      var digi = findOther(num,[sum-num[i]])
+    if(digi !== -1){
+            let index = tmp.findIndex((ele)=> JSON.stringify(ele) == JSON.stringify([num[i],...digi]));
+        if(index == -1){
+            tmp.push([num[i],...digi])
+        }
+   }
+  }
+    return tmp
+}
+
+function findOther(num,sum){
+    let value = []
+    for(let i=0;i<num.length;i++){
+      if(value[sum-num[i]]){
+            return [num[value[sum-num[i]]],num[i]]
+    }
+    value[num[i]] = i
+  }
+}
+console.log(find([-1, 0,1,2,-1,4],3))
+
+------------------
+function order(nums){
+    let newarr = []
+    for(let i=0;i<nums.length;i++){
+      for(let j=i+1;j<nums.length;j++){
+                if(nums[i] >nums[j]){
+                  let tmp = nums[i]
+              nums[i] = nums[j]
+              nums[j] = tmp
+          }
+            }
+  }
+  return nums
+}
+
+console.log(order([4,2,1,3]));
+-----------------
+
+Convert
+[1,2,[[3,4]],[[[5,6,7]]]] To [1,2,3,4,5,6,7]
+
+given string: abracadabra
+Count number of repeating alphabets
+Result: a=5, b=2 ..
+
+Write an optimized algo for the day to buy and day to sell a stock
+Example 1: Numerical Array [1,10,15,80,90,100,10,50,300,200]
+Expected output: [1,300]
+Example 2: Numerical Array [400, 100,15,80,90,100,10,50,30,200]
+Expected output: [15,200]
+
+Write an optimized to move the numbers from one array to 2 arrays; such that the sum of new arrays is zero  
+Example 1: Numerical Array [1, -1,2, -2, 3, -3, 4, -4, 5,-5]
+Expected output Array 1: [1,-1, 2,-2,3,-3]
+Expected output Array 2: [4,-4,5,-5]
+
+Write Shopping Cart Component
+- Consider Nailpolish, makeup set, perfume
+- Custoer should be able to add each to cart
+- update number of each item
+- check out 
+
+
+=================================================
+Coding questions :
+
+1. Integer Array sorting
+
+2. Check each character in a string is unique or not ?
+
+3.  Retrieving elements from an int array based on some condition
+
+example: Input1: 105264
+
+Input 2: Position 2
+
+Output: 102456
+
+4. Generate a problem for read and write
+
+5. Having an arrary list of employees, increase the salary of employees by 10000
+
+6. Having an array list of employees, filter the employee based on the given input
+
+7. Write a function interface to add the sum of two numbers
+
+8. write a programm to merge 2 integers arrays and sort them
+
+9. write a programm to sum all the elements in the integer array using streams
+
+10. write a programme to find employees from a list with specific salary
+
+11. Program for Database - Entity Relation with example
+
+ 
+
+What is FlatMap ?
+
+HashMap internals ?
+
+Difference between HashMap & HashSet ?
+
+Internals of HashSet; how does it work internally
+
+What are the java 8 features ?
+
+intern() method in String class ?
+
+How to access static inner class methods from outer class ?
+
+String Immutable examples
+
+ 
+
+Serial stream and parallel stream
+
+Livelocks on thread
+
+how many types of syncronization
+
+when to consider array list and linked list
+
+What are the changes in Java 8 on HashMap
+
+what is trywith resource
+
+what type of clases under list
+
+what is the super class for STACK
+
+what is Treeset and its super class
+
+Fail safe and Fail Fast
+
+controler
+
+Spring boot over spring advantages
+
+how many type of communications in microservices
+
+Design patterns for communication
+
+Aggrigator and chain of responsibility
+
+custom collection and custom linked list
+
+ 
+
+Disadvantage in Parallel streaming
+
+PriorityQueue vs LinkedListQueue
+
+ComponentScan
+
+Component vs service annotation
+
+Controller vs Restcontroller
+
+Can have 2 main method in Spring application
+
+Transactional Management in spring boot
+
+ 
+
+What are the types Isolation levels
+
+what is the contract between equals() and hashcode()
+
+internal working of HashMap, HashSet and Hashtable
+
+if hashcode of 2 objects is same then is that means objects are equals or not
+
+MultiValuedMap
+
+Load Balancing
+
+Interface A and B having a same abstract method then if a implementation class is implementing both the interfaces then error will come or not
+
+Interface A and B having a same default method then if a implementation class is implementing both the interfaces then error will come or not
+
+ 
+
+ 
+
+
+
+
+[5/24 5:25 PM] Krishnakanth Narava
+
+why service registry in microservices unlike monolithic
+
+one of the service you want to register with service registry - how you will register
+
+let's say we have lot of services and one of the service getting high traffic then we need to scale that particular service - how you will do that
+
+what are the transaction isolation and propogation levels
+
+inter communication of microservices - what are the parameters you need to pass while calling other microsevice
+
+in whicy scenario you will go with feign client and RestTemplate
+
+ 
+
+
+
+spring boot
+
+we have annotations based configutaion is there but still why we need to go with java based configuration along with annotations
+
+ 
+
+one to many relationship -> dept - employee
+
+ 
+
+
+
+write sql query to join 3 tables emp, address and dept
+
+what is an sql injection
+
+lets in an application we have upload option for uploading files but we want to allow certain kind of files only
+
+ 
+
+if you want to do database side performance tuning what are the steps you need to take
+
+ 
+
+ 
+
+
+
+
+[5/24 5:26 PM] Krishnakanth Narava
+
+core java -
+
+in loops which one you will choose string or stringbuilder?
+
+difference between stringbuffer and stringbuilder class
+
+intern method in string class
+
+0. difference between abstract and interface ? in which scenerio you will use ?
+
+1. Difference between ArrayList and LinkedList?
+
+2. internal working of HashMap?
+
+3. what is concurrentModificationException?
+
+4. Difference between HashMap and ConcurrentHashMap?
+
+5. Internal working of HashSet?
+
+6. what is TreeSet?
+
+7. what is the difference between voltaile & transient keywords ?
+
+8. what are the ways of implementing threads in java? which one is recommended and why ?
+
+9. What is Executers API in java and advantage of it ?
+
+10. what is synchronization ?
+
+11. what is the difference between class level lock and object level lock ?
+
+12. Difference between runnabble and callable interfaces ?
+
+13. what is future object ?
+
+java 8 features
+
+what is a functional interface
+
+what are predefined functional interfaces
+
+ 
+
+Hibernate -
+
+1. what are the core interfaces in hibernate ?
+
+2. difference between session & session factory ?
+
+3. difference between save & persist methods
+
+4. difference between get & load methods
+
+5. difference between update & merge methods
+
+6. hibernate cache
+
+ 
+
+Spring  Boot -
+
+1. what is starter dependency ?
+
+2. how you will create spring boot web project
+
+3. how you will change port
+
+4. how to override default servers
+
+5. important annotations in spring boot
+
+6. profiles in spring boot
+
+ 
+
+what are microservices design patterns?
+
+ 
+
+coding -
+
+ 
+
+sorting of an employee object based on salary using java streams
+
+I want to group by employee object based on department id like dept_id - and belonging employees using java streams api
+
+how to find max and min elements from an array
+
+sorting of an array
+
+harsha is a java developer -> character count
+
+find common elements in two int arrays
+
+ 
+
+do you have experience on gradle tool and diff b/w maven and gradle
+
+ 
+
+implements vs extends examples in real time
+
+ 
+
+•            marker interface , cloneable(cloning process)- what if not implements clone() method when deep cloning
+
+ 
+
+•            auto closeable (try with resource)-any restrict or condition to have in try block for classes
+
+ 
+
+•            reflections variables and usage and variables will be accessed
+
+ 
+
+•            override default methods
+
+ 
+
+•            what is the use of @CrossOrigin
+
+ 
+
+•            what details required for end users to access an API – Payload
+
+ 
+
+•            how security implementation - prevent not to use particular endpoints
+
+ 
+
+•            patch vs put usage in project
+
+ 
+
+•            what is swagger
+
+ 
+
+
+
+
+[5/24 5:26 PM] Krishnakanth Narava
+
+Discussion with Naveen --> prashant Sharma
+
+ 
+
+L1:
+
+Internal Explaination of ConcurrentHashMap
+
+What is Functional Interface and name FunctionalInterface you are aware of
+
+Is it mandatory to override a method present in an interface
+
+What is static and default method in interface
+
+What is singleton and how you can break it
+
+Types of IOC container in spring
+
+Which one [BeanFactory and ApplicationContext] supports lazy and eager loading and give an example to prove it
+
+Spring MVC flow
+
+Difference between session and sessionFactory
+
+Different entity states in Hibernate
+
+How we can reattach detached state in hibernate
+
+Design pattern in Hibernate
+
+Fail fast and fail safe difference
+
+Name 2 classes of View Resolver
+
+Do you know react/angular js
+
+Have you written query
+
+ 
+
+L2:
+
+Based on detail mentioned in resume. As per my resume below are the questions.
+
+Why do we use Postman? How we can authenticate or authorize from Postman
+
+How your app authenticate and authorize [REST api]
+
+What was your previous project flow [e.g. Spring MVC]
+
+Explain MVC architecture
+
+What is difference between Soap and Rest
+
+When to use SOAP
+
+What is RabbitMQ
+
+How to improve the fetch from database in database side
+
+What is difference between spy and mock
+
+How can we get a temporary table in db
+
+Few questions where on Stored Procedure
+
+Difference between HTML4 and HTML5
+
+What is JQuery
+
+What all you have done in UI and Java
+
+Tell the 2 best work done by you in your previous project
+
+ 
+
+•    What is Serialization Interface And Externalizble Interface?
+
+•    Internal Explaination of HashMap?
+
+•    What is Functional Interface and Lamdba Expression?
+
+•    How to make Singleton is threadsafe?
+
+•    Different Types of IOC containers in Spring.
+
+•    .Explaination of Spring MVC Flow.
+
+•    .Is SessionFactory is ThreadSafe in Hibernate?
+
+•    Difference Between BeanFactory and ApplicationContext in Spring?
+
+•    Types of  ApplicationContext in Spring ?
+
+•    Different persistent  states of Hibernate?
+
+•    Difference between get() and load() method in Hibernate?
+
+•    Explain about Caching in Hibernate?
+
+•    Advantages of Spring Boot and why do we use
+
+•    How the Gateway works in Spring Boot?
+
+•    What are Design Patterns in Hibernate.
+
+•    Session and session factory in Hibernate
+
+•    Handler in Java  , Spring
+
+•    Fail fast , fail safe iterators
+
+•    Functional Interface
+
+•    IOC Containers  in Spring
+
+•    Lamda Expression
+
+•    HashMap  internal architecture.
+
+•    Thread safe vs non Thread safe Data Structure
+
+•    Eger vs Lazy Loading
+
+•       How to connect with database in Spring Boot
+
+•       How to write microservices for application
+
+•       what are design pattern used in microservices
+
+•       How to connect between application in service of microservice
+
+[5/24 5:26 PM] Krishnakanth Narava
+
+Java Script
+
+- How do you ensure the performace of the application securly
+
+- Hooks and Lazy loading
+
+- How does lazy loading works internally
+
+- what is descructuring and when do we need it
+
+ 
+
+
+
+Programming logic
+
+ 
+
+Swap 2 variables without using 3rd variable
+
+    A=7, B=9
+
+ 
+
+Return 0 or 1
+
+()[]{} returns 0
+
+([{}]) returns 0
+
+({[}]) returns 1
+
+ 
+
+
+
+What is closure-  
+
+    Swap the value of var a=3 & var b=5.  
+
+    Question on reversing a string –
+
+    Question on caching in JavaScript -
+
+ 
+
+What is the ooutput and why; execute the same in console
+
+
+    function sayHi() { console.log(name); console.log(age); var name = "Lydia", let age = 21}
+
+    sayHi()
+
+ 
+
+
+
+    for(var i=0;i<3;i++) setTimeOut(() => console,log(i), 1);
+
+    for(let i=0;i<3;i++) setTimeOut(() => console,log(i), 1);
+
+ 
+
+//Pair of three numbers
+
+function find(num,sum){
+
+    num.sort((a,b)=> a-b)
+
+  const tmp = []
+
+    for(let i =0;i<num.length;i++){
+
+      var digi = findOther(num,[sum-num[i]])
+
+
+    if(digi !== -1){
+
+            let index = tmp.findIndex((ele)=> JSON.stringify(ele) == JSON.stringify([num[i],...digi]));
+
+        if(index == -1){
+
+            tmp.push([num[i],...digi])
+
+        }
+
+
+    }
+
+  }
+
+    return tmp
+
+}
+
+function findOther(num,sum){
+
+    let value = []
+
+    for(let i=0;i<num.length;i++){
+
+      if(value[sum-num[i]]){
+
+            return [num[value[sum-num[i]]],num[i]]
+
+    }
+
+    value[num[i]] = i
+
+  }
+
+}
+
+console.log(find([-1, 0,1,2,-1,4],3))
+
+ 
+
+
+
+------------------
+
+ 
+
+function order(nums){
+
+    let newarr = []
+
+    for(let i=0;i<nums.length;i++){
+
+      for(let j=i+1;j<nums.length;j++){
+
+                if(nums[i] >nums[j]){
+
+                  let tmp = nums[i]
+
+              nums[i] = nums[j]
+
+              nums[j] = tmp
+
+          }
+
+            }
+
+  }
+
+  return nums
+
+}
+
+console.log(order([4,2,1,3]));
+
+-----------------------------------------
+
+Convert
+
+[1,2,[[3,4]],[[[5,6,7]]]]
+
+ 
+
+To
+
+[1,2,3,4,5,6,7]
+
+-----------------------------------------
+
+given string: abracadabra
+
+Count number of repeating alphabets
+
+Result: a=5, b=2 ..
+
+ 
+
+-----------------------
+
+Write an optimized algo for the day to buy and day to sell a stock
+
+Example 1: Numerical Array [1,10,15,80,90,100,10,50,300,200]
+
+Expected output: [1,300]
+
+ 
+
+Example 2: Numerical Array [400, 100,15,80,90,100,10,50,30,200]
+
+Expected output: [15,200]
+
+-----------------------------------------
+
+ 
+
+Write an optimized to move the numbers from one array to 2 arrays; such that the sum of new arrays is zero  
+
+Example 1: Numerical Array [1, -1,2, -2, 3, -3, 4, -4, 5,-5]
+
+Expected output Array 1: [1,-1, 2,-2,3,-3]
+
+Expected output Array 2: [4,-4,5,-5]
+
+
+-----------------------------------------
+
+Write Shopping Cart Component
+
+- Consider Nailpolish, makeup set, perfume
+
+- Custoer should be able to add each to cart
+
+- update number of each item
+
+- check out
+
+-----------------------
+
+ 
+
+During L2
+
+- Create Custom Progress Bar
+
+- The progress section in Blue and background in Grey
+
+- Add % in the progress bar to show the progress
+
+- The progress should move/increase, every 2 milli sec
+
+===================================================
+TRANSACTIONAL MANAGEMENT IN SPRING BOOT
+
+>SPRING BOOT OVER SPRING ADVANTAGES ?
+->(default server,and annotations , Automated Spring configuration, no- xmls,Starter dependencies,Easier customization and management )
+
+>TYPES OF IOC CONTAINER IN SPRING ?
+-> beanfactory and applicationcontext
+
+WHICH ONE [BEANFACTORY AND APPLICATIONCONTEXT] SUPPORTS LAZY AND EAGER LOADING AND GIVE AN EXAMPLE TO PROVE IT
+-> The @Lazy annotation has been present since Spring version 3.0(APPLICATIONCONTEXT) There're several ways to tell the IoC container to initialize a bean lazily.When we put @Lazy annotation over the @Configuration class, it indicates that all the methods with @Bean annotation should be loaded lazily.
+
+COMPONENT VS SERVICE ANNOTATION?
+-> @Component is a generic stereotype for any Spring-managed component.
+ @Service annotates classes at the service layer.
+ @Repository annotates classes at the persistence layer, which will act as a database repository.
+
+> CONTROLLER VS RESTCONTROLLER COMPONENTSCAN
+-> @Controller is used to declare common web controllers which can return HTTP response but
+ @RestController is used to create controllers for REST APIs which can return JSON.
+ In Spring MVC, both @Controller and @RestController annotations are used to define web controllers as per MVC Design pattern.
+ 
+>CAN HAVE 2 MAIN METHOD IN SPRING APPLICATION
+-> yes, But need to add the fully qulifed name in buil> pulins>configuration.. in pom.xml
+
+WHAT IS AUTO-CONFIGURATION IN SPRINGBOOT ? HOW TO DISABLE AUTO-CONFIGURATION
+-> Auto dependencies are added at time of application creations like h2DB
+
+WHAT ARE THE DIFFERENT WAYS TO USE PROFILES IN SPRINGBOOT / PROFILES IN SPRING BOOT?
+->(applicatiom.propeties)spring.profiles.active = dev(application-dev.propeties,applicatiom.propeties testing,prod..
+
+IN WHICH SCENARIO YOU WILL GO WITH FEIGN CLIENT AND RESTTEMPLATE?
+
+WHAT ARE THE WAYS DIFFERENT SPRING BOOT APPLICATIONS COMMUNICATE ?
+Synchronous Communication.
+->Asynchronous Communication(kafka)
+
+WHAT IS THE BEST MODE OF COMMUNICATION FOR DECOUPLING ?
+Asynchronous Communication mode.
+
+WE HAVE ANNOTATIONS BASED CONFIGUTAION IS THERE BUT STILL WHY WE NEED TO GO WITH JAVA BASED CONFIGURATION ALONG WITH ANNOTATIONS
+
+LETS IN AN APPLICATION WE HAVE UPLOAD OPTION FOR UPLOADING FILES BUT WE WANT TO ALLOW CERTAIN KIND OF FILES ONLY
+->in Multipart file uploading there will be a MiMeType need to setting.
+
+WHAT IS EXECUTERS API IN JAVA AND ADVANTAGE OF IT ?
+->The Executor API reduces the execution of the task from the actual task to be executed through the Executors. The java.util.concurrent.Executors class provides a set of methods for creating ThreadPools of worker threads.
+
+NAME 2 CLASSES OF VIEW RESOLVER
+-> InternalResourceViewResolver,XMLResourceViewResolver,ResourceBundleViewResolver
+<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+  <property name="prefix" value="/WEB-INF/jsp/"/>
+  <property name="suffix" value=".jsp"/>
+</bean>
+
+
+WHAT IS STARTER DEPENDENCY ?
+ a set of convenient dependency descriptors that you can include in your application. You get a one-stop–shop for all the Spring and related technologies that you need without having to hunt
+
+HOW YOU WILL CREATE SPRING BOOT WEB PROJECT
+-> using the spring starter easy to add the  dependency descriptors in the intail stage.
+
+HOW TO OVERRIDE DEFAULT SERVERS
+-> how you will change port
+
+IMPORTANT ANNOTATIONS IN SPRING BOOT
+->@springbootApplication @RestController ,@Service ,@Repository, @component @configuration ,@bean
+
+WHAT DETAILS REQUIRED FOR END USERS TO ACCESS AN API
+–> request and response PAYLOAD
+
+WHAT IS THE USE OF @CROSSORIGIN
+->The crossorigin attribute sets the mode of the request to an HTTP CORS Request.CORS is used to manage cross-origin requests.
+
+DIFFERENT TYPES OF IOC CONTAINERS IN SPRING.
+->beanfactory  and applicationContext 3.0.0 above
+
+TYPES OF  APPLICATIONCONTEXT IN SPRING ?
+-> AnnotationConfigApplicationContext,
+AnnotationConfigWebApplicationContext,xmlWebApplicationContext,ClassPathXmlApplicationContext,
+  FileSystemXMLApplicationContext
+ 
+HOW THE GATEWAY WORKS IN SPRING BOOT?
+->It acts as a reverse proxy, routing requests from clients to the appropriate backend service and then returning the service's response back to the client.
+ 
+HOW TO CONNECT WITH DATABASE IN SPRING BOOT
+->it stops the JPA and configur the DB propeties in the application.propeties file.
+
+HOW SECURITY IMPLEMENTATION - PREVENT NOT TO USE PARTICULAR ENDPOINTS
+SPRING MVC FLOW
+DIFFERENCE BETWEEN BEANFACTORY AND APPLICATIONCONTEXT IN SPRING?
+THREAD SAFE VS NON THREAD SAFE DATA STRUCTURE
+EGER VS LAZY LOADING
+
+WHAT ARE MICROSERVICES DESIGN PATTERNS?
+WHAT IS SAGA PATTERN IN A MICROSERVICES ARCHITECTURE ?
+INTER COMMUNICATION OF MICROSERVICES - WHAT ARE THE PARAMETERS YOU NEED TO PASS WHILE CALLING OTHER MICROSERVICE
+WHAT ARE THE BEST PRACTICES FOR WEB SERVICES ? (EX: USING HTTP STATUS CODES CORRECTLY)
+ONE OF THE SERVICE YOU WANT TO REGISTER WITH SERVICE REGISTRY - HOW YOU WILL REGISTER
+LET'S SAY WE HAVE LOT OF SERVICES AND ONE OF THE SERVICE GETTING HIGH TRAFFIC THEN WE NEED TO SCALE THAT PARTICULAR SERVICE - HOW YOU WILL DO THAT
+HOW TO WRITE MICROSERVICES FOR APPLICATION
+HOW MANY TYPE OF COMMUNICATIONS IN MICROSERVICES
+HOW TO CONNECT BETWEEN APPLICATION IN SERVICE OF MICROSERVICE
+DESIGN PATTERNS FOR COMMUNICATION
+AGGRIGATOR AND CHAIN OF RESPONSIBILITY=
+LOAD BALANCING
+WHY SERVICE REGISTRY IN MICROSERVICES UNLIKE MONOLITHIC
+
+IS SESSIONFACTORY IS THREADSAFE IN HIBERNATE?
+DIFFERENCE BETWEEN SESSION AND SESSIONFACTORY
+WHAT ARE THE CORE INTERFACES IN HIBERNATE ?
+DIFFERENCE BETWEEN SAVE & PERSIST METHODS
+DIFFERENCE BETWEEN GET & LOAD METHODS
+DIFFERENCE BETWEEN UPDATE & MERGE METHODS
+HIBERNATE CACHE
+DIFFERENT ENTITY STATES IN HIBERNATE
+HOW WE CAN REATTACH DETACHED STATE IN HIBERNATE
+DESIGN PATTERN IN HIBERNATE
+
+
+
+
+
+CREATE ANOTHER TABLE FROM AN EXISTING TABLE WITHOUT ONE OF THE COLUMNS.
+CREATE A NEW TABLE WITH THE SAME STRUCTURE AS AN EXISTING TABLE, BUT WITH ZERO RECORDS
